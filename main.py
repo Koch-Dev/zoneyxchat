@@ -11,7 +11,7 @@ import re
 API_ID = os.environ.get("API_ID", "21309577") 
 API_HASH = os.environ.get("API_HASH", "df2554b54a9eb9e572979b5db2d0cc79") 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "5799143538:AAEA2JWzuRzum3n1JqTut_zsGMboQOIXdZk") 
-MONGO_URL = os.environ.get("MONGO_URL", " mongodb+srv://acha:acha@cluster0.pjq3j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+MONGO_URL = os.environ.get("MONGO_URL", "mongodb+srv://acha:acha@cluster0.pjq3j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 bot = Client(
     "V_Chat_Bot" ,
