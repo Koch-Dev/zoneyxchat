@@ -32,6 +32,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
+await message.
 buttons = [
     [
         InlineKeyboardButton(
@@ -39,7 +40,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="https://github.com/Chiranjib/fommbot"),
+            text="ᴏᴡɴᴇʀ", url="https://t.me/itszoneyt"),
     ],
    
     [
