@@ -33,25 +33,7 @@ async def is_admins(chat_id: int):
 @bot.on_message(filters.command("start"))
 async def start(client, message):
 await message.
-buttons = [
-    [
-        InlineKeyboardButton(
-            text="ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ᴍᴇ", url="https://t.me/UMIKO_CHAT_BOT?startgroup=true"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="https://t.me/itszoneyt"),
-    ],
-   
-    [
-        InlineKeyboardButton(
-            text="•sᴜᴘᴘᴏʀᴛ•", url=f"https://t.me/IND_BRAND"
-        ),
-        InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/+_6KcBmU8uWFjNmU1"
-        ),
-    ],
-]
+reply_sticker("CAACAgUAAxkBAAEENxZiNtPdibVkMsjLZrUG9NK4hotHQgAC2wEAAoM12VSdN9ujxVtnUyME") 
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
