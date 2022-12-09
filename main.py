@@ -32,7 +32,25 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_sticker("CAACAgUAAxkBAAEENxZiNtPdibVkMsjLZrUG9NK4hotHQgAC2wEAAoM12VSdN9ujxVtnUyME") 
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ᴍᴇ", url="https://t.me/UMIKO_CHAT_BOT?startgroup=true"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="ᴏᴡɴᴇʀ", url="https://github.com/Chiranjib/fommbot"),
+    ],
+   
+    [
+        InlineKeyboardButton(
+            text="•sᴜᴘᴘᴏʀᴛ•", url=f"https://t.me/IND_BRAND"
+        ),
+        InlineKeyboardButton(
+            text="ɢʀᴏᴜᴘ", url=f"https://t.me/+_6KcBmU8uWFjNmU1"
+        ),
+    ],
+]
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
@@ -46,7 +64,7 @@ async def chatbotofd(client, message):
            await is_admins(chat_id)
         ):
            return await message.reply_text(
-                "💥 𝐇𝐞𝐲 𝐘𝐨𝐮 𝐀𝐫𝐞 𝐍𝐨𝐭 𝐀 𝐀𝐝𝐦𝐢𝐧 💥"
+                "ᴘʜʟᴇ ᴀᴅᴍɪɴ ᴛᴏ ʙᴀɴ ʟᴇ"
             )
     is_v = v.find_one({"chat_id": message.chat.id})
     if not is_v:
