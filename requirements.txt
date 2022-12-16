@@ -4,3 +4,5 @@ requests
 dnspython
 tgcrypto==1.2.2
 python-telegram-bot==12.8
+flask
+gunicorn
