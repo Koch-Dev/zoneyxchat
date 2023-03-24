@@ -32,7 +32,16 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_sticker("CAACAgUAAxkBAAEENxZiNtPdibVkMsjLZrUG9NK4hotHQgAC2wEAAoM12VSdN9ujxVtnUyME") 
+    """Handler for /start command."""
+    # Define keyboard layout
+    keyboard = [[KeyboardButton("Start")]]
+    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+    
+    # Send welcome message
+    await message.reply_text(
+        text="Welcome to Ruhi Chat ! Press the Start button to begin.",
+        reply_markup=reply_markup
+    )
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
