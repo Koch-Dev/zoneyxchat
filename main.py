@@ -8,10 +8,10 @@ import os
 import re
 
 
-API_ID = os.environ.get("API_ID", "21309577") 
-API_HASH = os.environ.get("API_HASH", "df2554b54a9eb9e572979b5db2d0cc79") 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "5799143538:AAHdHuE63-yBXP4SD2zy9ay7QmkXwN8M_ok") 
-MONGO_URL = os.environ.get("MONGO_URL", "mongodb+srv://acha:acha@cluster0.pjq3j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+API_ID = os.environ.get("API_ID", "12") 
+API_HASH = os.environ.get("API_HASH", "123") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5536475537") 
+MONGO_URL = os.environ.get("MONGO_URL", "rity")
 
 bot = Client(
     "V_Chat_Bot" ,
@@ -32,16 +32,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-    """Handler for /start command."""
-    # Define keyboard layout
-    keyboard = [[KeyboardButton("Start")]]
-    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-    
-    # Send welcome message
-    await message.reply_text(
-        text="Welcome to Ruhi Chat ! Press the Start button to begin.",
-        reply_markup=reply_markup
-    )
+        await message.reply_sticker("CAACAgUAAx0CWn4axwABBJJQZC6kJE-LjSI7X-WKg9V5ejOYRwMAAhcFAAJG2ahU_sV1aMmaNs8vBA") 
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
@@ -55,14 +46,14 @@ async def chatbotofd(client, message):
            await is_admins(chat_id)
         ):
            return await message.reply_text(
-                "ᴘʜʟᴇ ᴀᴅᴍɪɴ ᴛᴏ ʙᴀɴ ʟᴇ"
+                "🙄𝘉𝘈𝘉𝘠 𝘠𝘖𝘜 𝘈𝘙𝘌 𝘕𝘖𝘛 𝘈𝘋𝘔𝘐𝘕🤗"
             )
     is_v = v.find_one({"chat_id": message.chat.id})
     if not is_v:
         v.insert_one({"chat_id": message.chat.id})
-        await message.reply_text(f"🖤ᴄʜᴀᴛʙᴏᴛ ɪs ᴇɴᴀʙʟᴇ ...!🖤\n\nɪғ ʏᴏᴜ ғᴀᴄᴇᴅ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴡɪᴛʜ ᴄʜᴀᴛʙᴏᴛ ᴛʜᴇɴ ʀᴇᴘᴏʀᴛ @INDIAN_SINGING_GROUPP\n\nʙʏ @itszoney")
+        await message.reply_text(f"💜𝘊𝘏𝘈𝘛 𝘉𝘖𝘛  𝘋𝘐𝘚𝘈𝘉𝘓𝘌𝘋")
     if is_v:
-        await message.reply_text(f"🥺ᴄʜᴀᴛʙᴏᴛ ᴅɪsᴀʙʟᴇᴅ ᴇɴᴛᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴛᴀʀᴛ.....!🖤")
+        await message.reply_text(f"𝘈𝘓𝘙𝘌𝘈𝘋𝘠 𝘉𝘈𝘕𝘋 𝘏𝘐 𝘛𝘖 𝘏𝘜 𝘈𝘉 𝘒𝘠𝘈 𝘑𝘈𝘈𝘕 𝘝 𝘓𝘖𝘎𝘌😞")
     
 
 @bot.on_message(
@@ -82,17 +73,17 @@ async def chatboton(client, message):
             )
     is_v = v.find_one({"chat_id": message.chat.id})
     if not is_v:           
-        await message.reply_text(f"🖤ᴄʜᴀᴛʙᴏᴛ ɪs ᴀʟʀᴇᴀᴅʏ sᴛᴀʀᴛᴇᴅ ...!🖤\n\nɪғ ʏᴏᴜ ғᴀᴄᴇᴅ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴡɪᴛʜ ᴄʜᴀᴛʙᴏᴛ ᴛʜᴇɴ ʀᴇᴘᴏʀᴛ @INDIAN_SINGING_GROUPP\n\nʙʏ @itszoney")
+        await message.reply_text(f"𝘊𝘏𝘈𝘛 𝘉𝘖𝘛 𝘈𝘓𝘙𝘌𝘈𝘋𝘠 𝘌𝘕𝘈𝘉𝘓𝘌𝘋")
     if is_v:
         v.delete_one({"chat_id": message.chat.id})
-        await message.reply_text(f"ᴄʜᴀᴛʙᴏᴛ ᴀʟʀᴇᴀᴅʏ sᴛᴀʀᴛᴇᴅ....!🖤\n\nɪғ ʏᴏᴜ ғᴀᴄᴇᴅ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴅᴍ @itszoney")
+        await message.reply_text(f"CHATBOT ENABLE.........")
     
 
 @bot.on_message(
     filters.command("chatbot", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
 async def chatbot(client, message):
-    await message.reply_text(f"ᴛʏᴘᴇ /on /off  ᴛᴏ sᴛᴀʀᴛ ʙᴏᴛ 🖤......")
+    await message.reply_text(f"**🇮🇳 How To Use :**\n/chatbot [on|off] Support Only Group!\n\nAny Kind Of problems dm me @itszoney")
 
 
 @bot.on_message(
