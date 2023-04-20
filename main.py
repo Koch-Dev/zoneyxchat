@@ -32,7 +32,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_sticker("CAACAgUAAx0CWn4axwABBJJQZC6kJE-LjSI7X-WKg9V5ejOYRwMAAhcFAAJG2ahU_sV1aMmaNs8vBA") 
+        await message.reply_sticker("CAACAgUAAx0CWrNeBQABD1e2ZECkGw8ZKq3loVBVrXT0PHPtMxgAAuIIAALp_5BVm44-BXzxIs4vBA") 
 @bot.on_message(
     filters.command("chatbot off", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
